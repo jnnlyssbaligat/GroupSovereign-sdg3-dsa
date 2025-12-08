@@ -1,1 +1,17 @@
+# Operating System Files 
+.DS_Store
+Thumbs.db
+*.log
 
+# IDE Settings
+.vscode/
+.idea/
+*.swp
+
+# Node Modules 
+node_modules/
+package-lock.json
+
+# Build/Dist folders 
+dist/
+build/
