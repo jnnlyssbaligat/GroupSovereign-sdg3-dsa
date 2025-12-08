@@ -1,0 +1,72 @@
+[
+  {
+    "id": "sample-001",
+    "author": "User100",
+    "content": "Condoms are important — always use one when unsure. Asking for advice.",
+    "likes": 87,
+    "timestamp": "2025-12-08T09:00:00Z"
+  },
+  {
+    "id": "sample-002",
+    "author": "User101",
+    "content": "Just got tested and the clinic was friendly and confidential. Sharing my experience.",
+    "likes": 112,
+    "timestamp": "2025-12-08T08:00:00Z"
+  },
+  {
+    "id": "sample-003",
+    "author": "User102",
+    "content": "Any tips for discussing contraception with a new partner? Asking for advice.",
+    "likes": 42,
+    "timestamp": "2025-12-08T07:00:00Z"
+  },
+  {
+    "id": "sample-004",
+    "author": "User103",
+    "content": "IUD experience: minimal pain, now I don't worry about pills. Sharing my experience.",
+    "likes": 95,
+    "timestamp": "2025-12-08T06:00:00Z"
+  },
+  {
+    "id": "sample-005",
+    "author": "User104",
+    "content": "Remember emergency contraception works best the sooner you take it. Asking for advice.",
+    "likes": 23,
+    "timestamp": "2025-12-08T05:00:00Z"
+  },
+  {
+    "id": "sample-006",
+    "author": "User105",
+    "content": "Testing helped me feel more confident in my relationship. Sharing my experience.",
+    "likes": 67,
+    "timestamp": "2025-12-08T04:00:00Z"
+  },
+  {
+    "id": "sample-007",
+    "author": "User106",
+    "content": "Where do you find low-cost STI testing near you? Asking for advice.",
+    "likes": 12,
+    "timestamp": "2025-12-08T03:00:00Z"
+  },
+  {
+    "id": "sample-008",
+    "author": "User107",
+    "content": "Has anyone tried the implant? How was recovery? Sharing my experience.",
+    "likes": 88,
+    "timestamp": "2025-12-08T02:00:00Z"
+  },
+  {
+    "id": "sample-009",
+    "author": "User108",
+    "content": "Talking about consent is crucial — be direct and kind. Asking for advice.",
+    "likes": 119,
+    "timestamp": "2025-12-08T01:00:00Z"
+  },
+  {
+    "id": "sample-010",
+    "author": "User109",
+    "content": "Plan B was accessible at my local pharmacy, no questions asked. Sharing my experience.",
+    "likes": 56,
+    "timestamp": "2025-12-08T00:00:00Z"
+  }
+]
