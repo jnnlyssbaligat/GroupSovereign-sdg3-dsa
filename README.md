@@ -1,4 +1,3 @@
-# GroupSovereign-sdg3-dsa
 # HealthHub: SDG 3 - Good Health and Well-being
 ### Sexual Health Education, Chatbot, Self-Assessment, & Community Forum
 
