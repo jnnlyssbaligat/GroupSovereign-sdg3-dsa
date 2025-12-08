@@ -1,0 +1,17 @@
+{
+  "meta": {
+    "description": "Hash Map dictionary for HealthBot keyword lookup",
+    "structure": "Key-Value Pair (O(1) Access)"
+  },
+  "data": {
+    "hello": "Hello! I'm HealthBot. I can answer questions about safe sex, contraception, clinics, and more.",
+    "help": "Try: 'safe sex', 'contraception', 'clinic', 'STI', 'emergency', or 'self assessment'.",
+    "safe_sex": "Safe sex means using protection (condoms), getting tested regularly, communicating with partners, and using contraception consistently.",
+    "contraception": "Options include pills, IUDs, implants, condoms, and more. Talk to a clinician to find what's right for you.",
+    "clinic": "Search online for sexual health clinics near you. Many offer confidential and affordable services. If it's urgent, go to the ER.",
+    "sti_testing": "STI testing is important if you're sexually active. Many STIs are treatable. Get tested annually or after unprotected contact.",
+    "emergency": "If it's an emergency, call your local emergency number or go to the nearest hospital immediately.",
+    "assessment": "Check out the Self-Assessment section in the navigation to use our checklists.",
+    "mental_health": "Sexual health includes mental well-being. Don't hesitate to seek therapy or counseling if needed."
+  }
+}
