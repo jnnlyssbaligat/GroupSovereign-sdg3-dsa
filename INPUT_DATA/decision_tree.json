@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "description": "Decision Tree logic for Self-Assessment Module",
+    "algorithm": "Tree Traversal (O(log N))"
+  },
+  "trees": {
+    "contraception": {
+      "title": "Contraception Finder",
+      "root_node": "start",
+      "nodes": {
+        "start": {
+          "q": "Do you want to prevent pregnancy right now?",
+          "yes": "hormonal_check",
+          "no": "sti_check_path"
+        },
+        "hormonal_check": {
+          "q": "Are you comfortable using hormones (like pill, patch, implant)?",
+          "yes": "daily_routine",
+          "no": "barrier_method"
+        },
+        "daily_routine": {
+          "q": "Are you good at remembering to take something every single day?",
+          "yes": "res_pill",
+          "no": "long_term"
+        },
+        "long_term": {
+          "q": "Do you want a method that lasts for years without maintenance?",
+          "yes": "res_implant_iud",
+          "no": "res_patch_ring"
+        },
+        "barrier_method": {
+          "q": "Do you also want protection against STIs?",
+          "yes": "res_condoms",
+          "no": "res_copper_iud"
+        },
+        "sti_check_path": {
+          "q": "Are you looking for protection solely against STIs?",
+          "yes": "res_condoms",
+          "no": "res_consult"
+        },
+        "res_pill": { "result": true, "title": "The Pill", "text": "Oral contraceptives might be great for you. They are 99% effective if taken daily." },
+        "res_implant_iud": { "result": true, "title": "Implant or Hormonal IUD", "text": "These are 'set and forget' methods. The implant goes in your arm (3 years), the IUD in your uterus (3-7 years)." },
+        "res_patch_ring": { "result": true, "title": "Patch or Ring", "text": "Try the Patch (change weekly) or the Ring (change monthly) if you don't want a daily pill." },
+        "res_condoms": { "result": true, "title": "External/Internal Condoms", "text": "The only method that prevents both pregnancy and STIs. Keep using them!" },
+        "res_copper_iud": { "result": true, "title": "Copper IUD", "text": "A hormone-free device that lasts up to 10 years. Highly effective." },
+        "res_consult": { "result": true, "title": "Consult a Specialist", "text": "Your needs sound unique. It's best to visit a clinic to discuss fertility awareness or sterilization." }
+      }
+    },
+    "sti": {
+      "title": "STI Risk Check",
+      "root_node": "start",
+      "nodes": {
+        "start": {
+          "q": "Have you had unprotected sex recently?",
+          "yes": "symptoms_check",
+          "no": "routine_check"
+        },
+        "symptoms_check": {
+          "q": "Do you have any symptoms? (Bumps, itchiness, discharge, pain)?",
+          "yes": "res_urgent",
+          "no": "partner_check"
+        },
+        "partner_check": {
+          "q": "Did your partner mention they might have an STI?",
+          "yes": "res_urgent",
+          "no": "window_period"
+        },
+        "window_period": {
+          "q": "Was the unprotected sex less than 2 weeks ago?",
+          "yes": "res_wait",
+          "no": "res_test_now"
+        },
+        "routine_check": {
+          "q": "Has it been more than 6 months since your last test?",
+          "yes": "res_routine",
+          "no": "res_safe"
+        },
+        "res_urgent": { "result": true, "title": "Visit a Clinic ASAP", "text": "Since you have symptoms or known exposure, please do not wait. STIs are treatable!" },
+        "res_wait": { "result": true, "title": "Wait & Monitor", "text": "Some tests cannot detect infections immediately. Use protection and test in 2 weeks, or visit a doctor for PEP if high risk." },
+        "res_test_now": { "result": true, "title": "Get Tested Now", "text": "You are outside the window period, so a test now will be accurate. It's good to be sure!" },
+        "res_routine": { "result": true, "title": "Time for a Checkup", "text": "We recommend testing every 6 months if you are sexually active, just to be safe." },
+        "res_safe": { "result": true, "title": "You're Good!", "text": "Keep using protection. You seem to be up to date with your health screenings." }
+      }
+    },
+    "consent": {
+      "title": "Consent Check-In",
+      "root_node": "start",
+      "nodes": {
+        "start": {
+          "q": "Did the other person say 'YES' clearly and enthusiastically?",
+          "yes": "pressure_check",
+          "no": "silence_check"
+        },
+        "pressure_check": {
+          "q": "Was there any pressure, guilt-tripping, or fear involved?",
+          "yes": "res_bad",
+          "no": "sobriety_check"
+        },
+        "silence_check": {
+          "q": "Did they stay silent, freeze up, or seem unsure?",
+          "yes": "res_bad",
+          "no": "body_language"
+        },
+        "body_language": {
+          "q": "Did they push you away or look uncomfortable?",
+          "yes": "res_bad",
+          "no": "res_communicate"
+        },
+        "sobriety_check": {
+          "q": "Was anyone incapacitated by drugs or alcohol?",
+          "yes": "res_bad",
+          "no": "res_good"
+        },
+        "res_good": { "result": true, "title": "Sounds Healthy!", "icon": "fas fa-check-circle", "text": "This sounds like a consensual, safe interaction. Communication is key!" },
+        "res_bad": { "result": true, "title": "Red Flag", "icon": "fas fa-exclamation-triangle", "text": "Consent must be free, enthusiastic, and sober. If this happened to you, it is not your fault. Reach out for support." },
+        "res_communicate": { "result": true, "title": "Unclear Territory", "text": "Consent shouldn't be a guessing game. If you aren't sure, ASK. 'Are you okay with this?' is a sexy question." }
+      }
+    }
+  }
+}
