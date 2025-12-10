@@ -15,25 +15,30 @@ The application serves as a comprehensive resource featuring an **algorithmic ch
 * **Goal 3:** Ensure healthy lives and promote well-being for all at all ages.
 * **Target 3.7:** By 2030, ensure universal access to sexual and reproductive health-care services, including for family planning, information and education, and the integration of reproductive health into national strategies and programmes.
 
----
+***
 
 ## ⚙️ Data Structures & Algorithms (DSA) Implementation
-This project utilizes core DSA concepts to ensure efficient data retrieval and logical flow:
+This project utilizes core DSA concepts to ensure efficient data retrieval and logical flow, strictly adhering to the complexity analysis in our documentation:
 
-### 1. Hash Maps (Dictionaries) — *Chatbot Module*
-* **Application:** The `knowledgeBase` object acts as a Hash Map.
-* **Logic:** User queries are tokenized and mapped against keys in the object.
-* **Complexity:** Average lookup time is **O(1)**, allowing for instant responses to keywords like "contraception" or "clinics" without iterating through every possible answer.
+### 1. Linear Search — *Chatbot (Intelligent Agent)*
+* **Application:** The `responses` array stores objects containing regex patterns and answers.
+* **Logic:** The agent iterates through the array sequentially, matching the user's input string against the regex patterns until a match is found.
+* **Complexity:** **O(N)** (Linear Time), where N is the number of predefined patterns. This was chosen over complex NLP for reliability and simplicity given the fixed dataset.
 
 ### 2. Decision Trees — *Self-Assessment Module*
-* **Application:** The "Contraception Finder", "STI Risk Check", "Consent Check-In" use a nested object structure representing a Decision Tree.
-* **Logic:** The algorithm traverses nodes (`start` -> `yes/no` -> `next_node`) until a leaf node (Result) is reached.
-* **Complexity:** **O(log N)** where N is the depth of the questions. This is the most efficient way to filter user needs based on binary choices.
+* **Application:** The "Diagnostic Engine" uses a Non-Linear Data Structure (Tree).
+* **Logic:** The algorithm traverses from a root node through "Yes/No" branches (`parent` → `child node`). Each user choice eliminates a subtree of possibilities until a leaf node (the Result) is reached.
+* **Complexity:** **O(H)** (Height of the Tree). This allows for rapid triage without evaluating every possible condition.
 
-### 3. Queue / Array List — *Community Forum*
-* **Application:** The Forum posts are stored in an Array acting as a List/Queue.
-* **Logic:** New posts are unshifted to the front (LIFO/Stack behavior for display) or sorted based on "Likes" using a sorting algorithm.
-* **Persistence:** Data is serialized to JSON and stored in LocalStorage to simulate a database.
+### 3. Sorting Algorithms (Merge/Quick Sort) — *Community Forum*
+* **Application:** The Forum posts are dynamically organized.
+* **Logic:** We implement a sorting logic that compares post objects by their "Likes" count or "Timestamp".
+* **Complexity:** **O(N log N)**. This ensures that the most relevant or popular community advice bubbles to the top efficiently, even as the number of posts grows.
+
+### 4. Hash Maps (Direct Addressing) — *Information Modal*
+* **Application:** The Educational Content Library.
+* **Logic:** Static content files are indexed by unique IDs (e.g., `modal-101`). When a user clicks "Learn More," the system retrieves the data instantly using the ID as a key.
+* **Complexity:** **O(1)** (Constant Time). This eliminates latency, ensuring instant access to medical definitions regardless of library size.
 
 ---
 
